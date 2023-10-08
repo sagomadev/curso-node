@@ -12,3 +12,8 @@ const content = fs.readFileSync("readme.md", "utf-8");
 const wordCount = content.split(" ").length;
 
 // ToDo: Cuenta el numero de veces que se repite la palabra "React" en el archivo
+
+const reactWordCount = content.match(/React/gi).length;
+
+console.log(`El archivo readme.md tiene ${wordCount} palabras`);
+console.log(`La palabra React se repite ${reactWordCount} veces`);
